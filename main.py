@@ -3,7 +3,8 @@ import yt_dlp
 import os
 import asyncio
 
-TOKEN = '1980869890:AAETPwW6iffClCJ28UsfNDe9Iif7vIG4C3Y'
+# ✅ Read token from environment variable (do NOT hardcode)
+TOKEN = os.getenv("BOT_TOKEN")
 
 async def start(update, context):
     await update.message.reply_text("Send me a video link!")
@@ -35,3 +36,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
